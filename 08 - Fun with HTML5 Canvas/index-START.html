@@ -7,13 +7,13 @@
 <body>
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
-  const canvas = document.querySelector("#draw")
-  const ctx = canvas.getContext("2d")
+  const canvas = document.querySelector('#draw');
+  const ctx = canvas.getContext('2d');
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`
-  ctx.lineJoin = "round"
-  ctx.lineCap = "round"
+  ctx.strokeStyle = "BADA55"
+  ctx.lineJoin = "round";
+  ctx.lineCap = "round";
   ctx.lineWitdh = 50;
   let isDrawing = false 
   let lastX = 0; 
@@ -27,7 +27,7 @@
     ctx.beginPath()
     ctx.moveTo(lastX, lastY)
     ctx.lineTo(e.offsetX, e.offsetY)
-    cxt.stroke()
+    ctx.stroke()
 
     [lastX, lastY] = [e.offsetX, e.offsetY];
     hue++;
