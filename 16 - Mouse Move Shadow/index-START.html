@@ -48,6 +48,11 @@
       y = y + e.target.offsetTop;
     }
     const xWalk = (x / width * walk ) - (walk / 2)
+    const yWalk = (y / height * walk) - (walk / 2)
+
+    text.style.textShadow = `${xWalk}px ${yWalk}px 0 red`
+    console.log(xWalk, yWalk)
+
   }
 
   hero.addEventListener("mousemove", shadow)
