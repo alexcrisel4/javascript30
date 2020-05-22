@@ -31,16 +31,25 @@
   const items = [];
 function addItem(e) {
   e.preventDefault()
-  const text = (this.querySelector('[name=item')).value
+  const text = (this.querySelector('[name=item]')).value
   const item = {
     text,
     done: false
   }
   this.reset()
+  populationList(items, itemsList)
   items.push(item)
 }
 
-fun
+function populationList(plates = [], platesList) {
+  platesList.innerHTML = plates.map((plate, idx) => {
+    return `
+      <li>
+        <label for=""">${plate.text}</label>
+      <li>
+    `;
+  }).join("");
+}
 
 addItems.addEventListener('submit', addItem)
 </script>
